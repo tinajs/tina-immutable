@@ -60,8 +60,32 @@ Page.define({
 })
 ```
 
+```javascript
+// components/like.js
+import { Component } from '@tinajs/tina'
+import { fromJS, Map } from 'immutable'
+
+Component.define({
+  properties: {
+    // Limited by the offical Mina framkework, properties only accepts [plain types](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/custom-component/component.html).
+    // However, our tina-immutable plugin will transform the values of all properties to Immutable, before they are merged into ``this.data``.
+    item: Object,
+  },
+  data: {
+    like: true,
+  },
+
+  methods: {
+    toggle () {
+      // You can use the properties as Immutable by accessing ``this.data``.
+      this.triggerEvent('toggle', { item: this.data.get('item') })
+    },
+  },
+})
+```
+
 ## Example
-[See ./example](example/README.md)
+[See ./example](example/readme.md)
 
 ## License
 MIT &copy; [yelo](https://github.com/tinajs), 2017 - present

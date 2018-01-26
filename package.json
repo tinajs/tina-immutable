@@ -1,6 +1,6 @@
 {
   "name": "@tinajs/tina-immutable",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Immutable data for Tina.js",
   "main": "dist/tina-immutable.js",
   "author": "yelo",

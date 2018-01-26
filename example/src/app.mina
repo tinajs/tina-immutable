@@ -10,6 +10,11 @@
 </config>
 
 <script>
+import Tina from '@tinajs/tina'
+import ImmutablePlugin from '../..'
+
+Tina.use(ImmutablePlugin)
+
 App({
 })
 </script>

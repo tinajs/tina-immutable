@@ -19,7 +19,7 @@ Component.define({
   },
   methods: {
     handleTap () {
-      this.triggerEvent('toggle', { todo: this.data.todo })
+      this.triggerEvent('toggle', { todo: this.data.get('todo') })
     },
   },
 })

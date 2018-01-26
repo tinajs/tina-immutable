@@ -1,13 +1,13 @@
-import Immutable from 'immutable'
+import { isImmutable, fromJS, is } from 'immutable'
 
 export default function create (Tina) {
   class ImmutableDataAdaptor extends Tina.BasicDataAdaptor {
     static isData (data) {
-      return Immutable.isImmutable(data)
+      return isImmutable(data)
     }
 
     static fromPlainObject (plain) {
-      return Immutable.fromJS(plain)
+      return fromJS(plain)
     }
 
     static merge (original, extra) {
@@ -15,11 +15,13 @@ export default function create (Tina) {
     }
 
     static diff (original, extra) {
-      return original.filter((value, key) => !Immutable.is(value, extra.get(key)))
+      return original.filter((value, key) => !is(value, extra.get(key)))
     }
 
     static toPlainObject (data) {
       return data.toJS()
     }
   }
+
+  return ImmutableDataAdaptor
 }

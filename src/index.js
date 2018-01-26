@@ -3,7 +3,7 @@ import createAdaptor from './adaptor'
 const Plugin = {
   install (Tina) {
     const ImmutableDataAdaptor = createAdaptor(Tina)
-    Tina.Unit.Adaptor = ImmutableDataAdaptor
+    Tina.Unit.DataAdaptor = ImmutableDataAdaptor
   },
 }
 

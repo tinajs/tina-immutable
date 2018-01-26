@@ -1,4 +1,4 @@
-# todomvc-lite
+# tina-immutable-demo
 
 ## Get Started
 ```bash

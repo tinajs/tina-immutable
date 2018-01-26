@@ -85,7 +85,8 @@ Component.define({
 ```
 
 ## Example
-[See ./example](example/readme.md)
+- [Basic](example/readme.md)
+- [Using with Redux](https://github.com/tinajs/tina-examples/blob/master/packages/todomvc-lite-redux-immutable)
 
 ## License
 MIT &copy; [yelo](https://github.com/tinajs), 2017 - present

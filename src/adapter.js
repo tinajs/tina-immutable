@@ -1,7 +1,7 @@
 import { isImmutable, fromJS, is } from 'immutable'
 
-export default function create (Tina) {
-  class ImmutableDataAdaptor extends Tina.BasicDataAdaptor {
+export default function create (BasicDataAdapter) {
+  class ImmutableDataAdapter extends BasicDataAdapter {
     static isData (data) {
       return isImmutable(data)
     }
@@ -23,5 +23,5 @@ export default function create (Tina) {
     }
   }
 
-  return ImmutableDataAdaptor
+  return ImmutableDataAdapter
 }

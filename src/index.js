@@ -1,9 +1,15 @@
-import createAdaptor from './adaptor'
+import createAdapter from './adapter'
 
 const Plugin = {
-  install (Tina) {
-    const ImmutableDataAdaptor = createAdaptor(Tina)
-    Tina.Unit.DataAdaptor = ImmutableDataAdaptor
+  install ({ Page, Component, BasicDataAdapter }) {
+    const ImmutableDataAdapter = createAdapter(BasicDataAdapter)
+    const options = {
+      adapters: {
+        data: ImmutableDataAdapter,
+      },
+    }
+    Page.mixin(options)
+    Component.mixin(options)
   },
 }
 

@@ -36,6 +36,6 @@
     "rimraf": "^2.6.2",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "url-loader": "^0.6.2",
-    "webpack": "^3.8.1"
+    "webpack": "^5.94.0"
   }
 }
